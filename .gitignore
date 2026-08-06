@@ -1,0 +1,13 @@
+.Rhistory
+.RData
+.DS_Store
+
+data/raw/
+*.fastq.gz
+*.fq.gz
+*.bam
+*.bai
+
+results/
+
+logs/
