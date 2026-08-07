@@ -8,33 +8,22 @@ The pipeline was developed for a Linux HPC environment using the SLURM workload 
 
 ## Workflow
 
-```text
-Raw FASTQ files
-        |
-        
-    FastQC
-        │
-        ▼
-    MultiQC
-        │
-        ├────────────── QC reports
-        │
-        ▼
-    STAR alignment
-        │
-        |------ Sorted BAM files
-        │
-        ▼
- Salmon quantification
-        │
-        ▼
- Transcript abundance estimates
-        │
-        ▼
-Import into R using tximport
-        │
-        ▼
-DESeq2 and downstream analyses
+```mermaid
+flowchart TD
+    A[Raw FASTQ] --> B[FastQC]
+    B --> C[MultiQC]
+    C --> D[STAR Alignment]
+    D --> E[Salmon Quantification]
+    E --> F[tximport]
+    F --> G[DESeq2]
+    G --> H[ESTIMATE]
+    G --> I[ClusterProfiler]
+    G --> J[decoupleR]
+    H --> K[Machine Learning]
+    I --> K
+    J --> K
+    K --> L[Candidate Biomarkers]
+    L --> M[Publication Figures]
 ```
 
 ---
