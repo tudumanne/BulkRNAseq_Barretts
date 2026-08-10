@@ -16,14 +16,14 @@ The following software modules were used for the analysis.
 ### Workflow
 
 ```mermaid
-flowchart TD; 
-    A [Raw FASTQ files] --> B [FastQC]
-    A [Raw FASTQ files] --> C [STAR alignment]
-    A [Raw FASTQ files] --> D [Salmon quantification]
-    B --> E [MultiQC]
-    E --> F [QC reports]
-    C --> G [Gene-level read counts]
-    D --> [TPM counts]
+graph TD; 
+    A [Raw FASTQ files] --> B [FastQC];
+    A [Raw FASTQ files] --> C [STAR alignment];
+    A [Raw FASTQ files] --> D [Salmon quantification];
+    B --> E [MultiQC];
+    E --> F [QC reports];
+    C --> G [Gene-level read counts];
+    D --> [TPM counts];
 ```
 
 
