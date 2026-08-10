@@ -16,7 +16,7 @@ The following software modules were used for the analysis.
 ### Workflow
 
 ```mermaid
-flowchart TD 
+flowchart TD; 
     A [Raw FASTQ files] --> B [FastQC]
     A [Raw FASTQ files] --> C [STAR alignment]
     A [Raw FASTQ files] --> D [Salmon quantification]
