@@ -17,13 +17,13 @@ The following software modules were used for the analysis.
 
 ```mermaid
 graph TD; 
-    A [Raw FASTQ files] --> B [FastQC];
-    A --> C [STAR alignment];
-    A --> D [Salmon quantification];
-    B --> E [MultiQC];
-    E --> F [QC reports];
-    C --> G [Gene-level read counts];
-    D --> H [TPM counts];
+    A[Raw FASTQ files]-->B[FastQC];
+    A-->C[STAR alignment];
+    A-->D[Salmon quantification];
+    B-->E[MultiQC];
+    E-->F[QC reports];
+    C-->G[Gene-level read counts];
+    D-->H[TPM counts];
 ```
 
 
