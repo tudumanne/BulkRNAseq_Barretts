@@ -14,10 +14,10 @@ The 'hpc' and 'R' folders contain more information on how the analyses were run 
 
 ``` mermaid
 graph TD; 
-    classDef method fill:#d4edda;
-    classDef input fill:#d4edda;
-    classDef output1 fill:#f8d7da;
-    classDef output2 fill:#f8d7da;
+    classDef method fill:#d4edda,stroke:#28a745;
+    classDef input fill:#ffffff,stroke:#ffffff;
+    classDef output1 fill:#ffffff,stroke:#ffffff;
+    classDef output2 fill:#edabab,stroke:#edabab;
     
     A[Raw FASTQ files]:::input-->B[STAR alignment]:::method;
     A-->C[Salmon quantification];
