@@ -14,7 +14,12 @@ The 'hpc' and 'R' folders contain more information on how the analyses were run 
 
 ``` mermaid
 graph TD; 
-    A[Raw FASTQ files]-->B[STAR alignment];
+    classDef method fill:#d4edda;
+    classDef input fill:#d4edda;
+    classDef output1 fill:#f8d7da;
+    classDef output2 fill:#f8d7da;
+    
+    A[Raw FASTQ files]:::input-->B[STAR alignment]:::method;
     A-->C[Salmon quantification];
     B-->D[Gene-level read counts];
     D-->E[DESeq2];
