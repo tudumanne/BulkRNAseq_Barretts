@@ -1,16 +1,30 @@
-## RNA-seq Analysis Pipeline for Pathway Analysis and Biomarker Discovery in Barrett's Neoplasia
+## Bulk RNA-seq pipeline for pathway analysis and biomarker discovery
 
-This repository contains the data analysis pipeline used for the analysis of bulk RNA-seq data described in:
+This repository contains the data analysis pipeline used for the following project:
 [Add citation]
+
+Data generation: 
+The libraries were prepared using Illumina Stranded Total RNA Prep with Ribo-Zero Plus kit and sequenced on NovaSeq 6000 (S4 flow cell 300 cycles) with 2x150bp setting.
 
 ### Overview of the analysis workflow
 
-Sequencing data alignment and read count estimations were run on a high-performance computing (HPC) system based on Linux. 
-R based analyses were carried out using RStudio run on MacOS Ventura 13.0.
+Initial processing of sequencing data, including fastq read alignment and count estimations were run on a high-performance computing (HPC) system based on Linux. 
+Downstream analyses were performed in R using RStudio on macOS Ventura 13.0.
 
-The 'hpc' and 'R' folders contain more information on how the analyses were run and template scripts used.
+The 'hpc' and 'R' folders contain additional information on the methods and the template scripts used to perform the analysis.
 
-### Workflow
+### Repository structure 
+- `hpc/` - shell scripts for sequencing data processing 
+- `R/` - R scripts for downstream analyses
+- `config/` - software versions, reference genomes and parameters
+- `metadata/` - sample metadata
+
+### Data avaiability 
+Raw FASTQ files generated in this study have been deposited in the European Nucleotide Archive (ENA) at EMBL-EBI under accession number PRJEBxxxx (https://www.ebi.ac.uk/ena/browser/view/PRJEBxxxx).
+
+The publicly available metadata are restricted to the sample group information.
+
+### Workflow summary
 
 ``` mermaid
 graph TD; 
