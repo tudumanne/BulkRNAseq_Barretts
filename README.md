@@ -26,15 +26,14 @@ graph TD;
     I-->J
     J-->K[DEG lists adjusted model];
     G-->L[Cluster Profiler];
-    F-->M[decoupleR]; 
-    G-->M;
+    G-->M[decoupleR]; 
     C-->N[TPM counts];
-    E-->O[Biomarker filtering];
+    G-->O[Biomarker filtering];
     K-->O;
     F-->O;
     N-->O;
     O-->P[Shortlisted biomarkers]
     P-->Q[ML ranking];
-    Q-->R[protein-coding genes]
+    P-->R[protein-coding genes]
     R-->S[STRINGDB];
 ```
