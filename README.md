@@ -19,7 +19,7 @@ graph TD;
     B-->D[Gene-level read counts];
     D-->E[DESeq2];
     E-->F[Normalized counts];
-    E-->G[DEG lists];
+    E-->G[DEG lists/Normalized counts];
     G-->H[Cluster Profiler];
     G-->I[decoupleR]; 
     C-->J[TPM counts];
