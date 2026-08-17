@@ -1,24 +1,30 @@
-# RNAseq-Barrett's esophagus code repository
-This repository contains the RNAseq data analysis pipeline used for molecular pathway and biomarker signature discovery study in Barrett's esophagus, dysplasia and EAC.
-Transcriptomic profiling was carried out using bulk RNA-sequencing (paired-end short read - Illumina).
+# RNA-seq Analysis Pipeline for Pathway Analysis and Biomarker Discovery in Barrett's Neoplasia
+
+This repository contains the data analysis pipeline used for the analysis of bulk RNA-seq data described in:
+[Add citation]
 
 ### Overview of the analysis workflow
-Sequencing data alignment and read count estimations were run on a high-performance computing (HPC) system based on Linux. R based analysis was carried out in RStudio/MacOS Ventura. 
+
+Sequencing data alignment and read count estimations were run on a high-performance computing (HPC) system based on Linux. 
+R based analyses were carried out using RStudio run on MacOS Ventura 13.0.
 
 The 'hpc' and 'R' folders contain more information on how the analyses were run and template scripts used.
 
-
 ### Workflow
 
-```mermaid
+``` mermaid
 graph TD; 
     A[Raw FASTQ files]-->B[FastQC quality check];
     A-->C[STAR alignment];
     A-->D[Salmon quantification];
-    B-->E[MultiQC single HTML report];
-    C-->G[Gene-level read counts];
-    D-->H[TPM counts];
-    G-->I[DESeq2 differential expression analysis]
-    I--normalized counts-->J[ESTIMATE via R package tidyestimate]
-    J--adjusted model-->I
+    B-->E[MultiQC - single HTML report];
+    C--Gene-level read counts-->F[DESeq2 differential expression analysis];
+    F--normalized counts-->G[ESTIMATE via R package tidyestimate];
+    G--adjusted model-->F;
+    F--DEG lists-->H[Cluster Profiler];
+    F--DEG lists + normalized counts-->I[decoupleR];
+    D--TPM counts-->J[Biomarker filtering - custom R scripts];
+    F--DEG lists + normalized counts-->J;
+    J-->K[ML];
+    J--protein-coding genes-->L[STRINGDB];
 ```
