@@ -17,22 +17,22 @@ graph TD;
     classDef method fill:#d4edda,stroke:#28a745;
     classDef input fill:#ffffff,stroke:#000000;
     classDef output1 fill:#ffffff,stroke:#000000;
-    classDef output2 fill:#edabab,stroke:#edabab;
+    classDef output2 fill:#edabab,stroke:#520612;
     
     A[Raw FASTQ files]:::input-->B[STAR alignment]:::method;
     A-->C[Salmon quantification]:::method;
     B-->D[Gene-level read counts]:::output1;
-    D-->E[DESeq2];
-    E-->F[DEG lists/Normalized counts];
-    F-->G[Cluster Profiler];
-    F-->H[decoupleR]; 
-    C-->I[TPM counts];
-    F-->J[Biomarker filtering];
+    D-->E[DESeq2]:::method;
+    E-->F[DEG lists/Normalized counts]:::output1;
+    F-->G[Cluster Profiler]:::method;
+    F-->H[decoupleR]:::method; 
+    C-->I[TPM counts]:::output1;
+    F-->J[Biomarker filtering]:::method;
     I-->J;
-    J-->K[Shortlisted biomarkers]
-    K-->L[ML ranking];
-    K-->M[protein-coding genes]
-    M-->N[STRINGDB];
-    L-->O[five-gene panel];
+    J-->K[Shortlisted biomarkers]:::output1;
+    K-->L[ML ranking]:::method;
+    K-->M[protein-coding genes]:::output1;
+    M-->N[STRINGDB]:::method;
+    L-->O[five-gene panel]:::output2;
     L-->P[IHC candidates]:::output2;
 ```
