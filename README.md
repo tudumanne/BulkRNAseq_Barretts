@@ -17,24 +17,24 @@ graph TD;
     A[Raw FASTQ files]-->B[STAR alignment];
     A-->C[Salmon quantification];
     B-->D[Gene-level read counts];
-    D-->E[DESeq2 simple model(R)];
+    D-->E[DESeq2 simple model];
     E-->F[Normalized counts];
     E-->G[DEG lists simple model];
-    F-->H[tidyestimate(R)];
+    F-->H[tidyestimate];
     H-->I[stromal/immune scores];
-    D-->J[DESeq2 Adjusted model(R)];
+    D-->J[DESeq2 Adjusted model];
     I-->J
     J-->K[DEG lists adjusted model];
-    G-->L[Cluster Profiler(R)];
-    F-->M[decoupleR(R)]; 
+    G-->L[Cluster Profiler];
+    F-->M[decoupleR]; 
     G-->M;
     C-->N[TPM counts];
-    E-->O[Biomarker filtering(R)];
+    E-->O[Biomarker filtering];
     K-->O;
     F-->O;
     N-->O;
     O-->P[Shortlisted biomarkers]
-    P-->Q[ML ranking(R)];
+    P-->Q[ML ranking];
     Q-->R[protein-coding genes]
     R-->S[STRINGDB];
 ```
