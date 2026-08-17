@@ -18,15 +18,14 @@ graph TD;
     A-->C[Salmon quantification];
     B-->D[Gene-level read counts];
     D-->E[DESeq2];
-    E-->F[Normalized counts];
-    E-->G[DEG lists/Normalized counts];
-    G-->H[Cluster Profiler];
-    G-->I[decoupleR]; 
-    C-->J[TPM counts];
-    G-->K[Biomarker filtering];
-    J-->K;
-    K-->L[Shortlisted biomarkers]
-    L-->M[ML ranking];
-    L-->N[protein-coding genes]
-    N-->O[STRINGDB];
+    E-->F[DEG lists/Normalized counts];
+    F-->G[Cluster Profiler];
+    F-->H[decoupleR]; 
+    C-->I[TPM counts];
+    F-->J[Biomarker filtering];
+    I-->J;
+    J-->K[Shortlisted biomarkers]
+    K-->L[ML ranking];
+    K-->M[protein-coding genes]
+    M-->N[STRINGDB];
 ```
