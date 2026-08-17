@@ -1,4 +1,4 @@
-# RNA-seq Analysis Pipeline for Pathway Analysis and Biomarker Discovery in Barrett's Neoplasia
+## RNA-seq Analysis Pipeline for Pathway Analysis and Biomarker Discovery in Barrett's Neoplasia
 
 This repository contains the data analysis pipeline used for the analysis of bulk RNA-seq data described in:
 [Add citation]

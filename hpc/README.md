@@ -35,15 +35,20 @@ config.sh
 
 ```mermaid
 graph TD; 
-    A[Raw FASTQ files]-->B[FastQC quality check];
-    A-->C[STAR alignment];
-    A-->D[Salmon quantification];
-    B-->E[MultiQC single HTML report];
-    E-->F[QC reports];
-    C-->G[Gene-level read counts];
-    D-->H[TPM counts];
-    G-->I[Downstream analysis in R]
-    H-->I
+    classDef method fill:#d4edda,stroke:#28a745;
+    classDef input fill:#ffffff,stroke:#000000;
+    classDef output1 fill:#ffffff,stroke:#000000;
+    classDef output2 fill:#edabab,stroke:#520612;
+
+    A[Raw FASTQ files]:::input-->B[FastQC quality check]:::method;
+    A-->C[STAR alignment]:::method;
+    A-->D[Salmon quantification]:::method;
+    B-->E[MultiQC single HTML report]:::method;
+    E-->F[QC reports]:::output1;
+    C-->G[Gene-level read counts]:::output1;
+    D-->H[TPM counts]:::output1;
+    G-->I[Downstream analysis in R]:::method;
+    H-->I;
 ```
 
 
