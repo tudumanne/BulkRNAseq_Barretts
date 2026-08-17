@@ -28,4 +28,6 @@ graph TD;
     K-->L[ML ranking];
     K-->M[protein-coding genes]
     M-->N[STRINGDB];
+    L-->O[five-gene panel];
+    L-->P[IHC candidates];
 ```
