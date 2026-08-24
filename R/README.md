@@ -46,7 +46,7 @@ graph TD;
     B-->C[DEG lists - simple model]:::output1;
     B-->D[Normalized counts]:::output1;
     D-->E[02_tidyestimate]:::method;
-    E-->F[stromal/immune scores]:::output1;;
+    E-->F[Stromal/Immune scores]:::output1;;
     A-->G[03_DESeq2 adjusted model]:::method;;
     F-->G;
     G-->H[DEG lists - adjusted model]:::output1;
@@ -58,6 +58,6 @@ graph TD;
     H-->L;
     L-->M[Shortlisted biomarkers]:::output1;
     M-->N[07_ML ranking]:::method;
-    N-->O[five-gene panel]:::output2;
+    N-->O[Five-gene panel]:::output2;
     N-->P[IHC candidates]:::output2;
 ```
