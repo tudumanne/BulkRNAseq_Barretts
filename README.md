@@ -1,10 +1,11 @@
 ## Bulk RNA-seq pipeline for pathway analysis and biomarker discovery
 
 This repository contains the data analysis pipeline used for the following project:
+
 [Add citation]
 
 Data generation: 
-The libraries were prepared using Illumina Stranded Total RNA Prep with Ribo-Zero Plus kit and sequenced on NovaSeq 6000 (S4 flow cell 300 cycles) with 2x150bp setting.
+The libraries were prepared using Illumina Stranded Total RNA Prep with Ribo-Zero Plus kit and sequenced on NovaSeq X with 2x150bp setting.
 
 ### Overview of the analysis workflow
 
