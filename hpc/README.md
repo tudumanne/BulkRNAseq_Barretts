@@ -20,8 +20,8 @@ The following software modules were used for the analysis.
 Required inputs include:
 
 - Paired-end FASTQ files (`*.fastq.gz`)
-- Reference genome (FASTA, GRCh38.primary_assembly.genome.fa)
-- Gene annotation (GTF, gencode.v36.primary_assembly.annotation.gtf)
+- Reference genome (FASTA, `GRCh38.primary_assembly.genome.fa`)
+- Gene annotation (GTF, `gencode.v36.primary_assembly.annotation.gtf`)
 
 The scripts required for the analysis are located in respective directories. 
 Project-specific paths are defined in
