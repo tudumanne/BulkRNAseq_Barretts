@@ -48,10 +48,10 @@ graph TD;
     C-->F[decoupleR]:::method;
     G[TPM counts]:::input-->H[Biomarker filtering]:::method;
     D-->H;
+    C-->H;
     H-->J[Shortlisted biomarkers]:::output1;
     J-->K[ML ranking]:::method;
     J-->L[protein-coding genes]:::output1;
-    L-->M[STRINGDB]:::method;
-    K-->O[five-gene panel]:::output2;
-    L-->P[IHC candidates]:::output2;
+    K-->M[five-gene panel]:::output2;
+    K-->N[IHC candidates]:::output2;
 ```
