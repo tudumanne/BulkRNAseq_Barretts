@@ -17,13 +17,13 @@ The 'hpc' and 'R' folders contain additional information on the methods and the 
 ### Repository structure 
 - `hpc/` - shell scripts for sequencing data processing 
 - `R/` - R scripts for downstream analyses
-- `config/` - software versions, reference genomes and parameters
+- `annotation_files/` - custom annotation files
 - `metadata/` - sample metadata
 
 ### Data avaiability 
 Raw FASTQ files generated in this study have been deposited in the European Nucleotide Archive (ENA) at EMBL-EBI under accession number PRJEBxxxx (https://www.ebi.ac.uk/ena/browser/view/PRJEBxxxx).
 
-The publicly available metadata are restricted to the sample group information.
+Sample group information (`metadata/`) and custom annotation files (`annotation_files/`) are currently accessible, while processed data and raw data on ENA remain restricted until formal publication.
 
 ### Workflow summary
 
