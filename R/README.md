@@ -50,7 +50,7 @@ graph TD;
     A-->G[03_DESeq2 adjusted model]:::method;;
     F-->G;
     G-->H[DEG lists - adjusted model]:::output1;
-    C-->I[04_ClusterProfiler]:::method;
+    C-->I[04_clusterProfiler]:::method;
     C-->J[05_decoupleR]:::method;
     K[TPM counts]:::input-->L[06_Biomarker filtering]:::method;
     D-->L;

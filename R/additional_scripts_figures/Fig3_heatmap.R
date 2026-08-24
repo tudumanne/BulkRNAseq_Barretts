@@ -66,10 +66,10 @@ colAnn <- HeatmapAnnotation(
   col = list(
     Classification = c(
       "NSq"="#984ea3",
-      "IM"="#377eb8",
+      "NDBE"="#377eb8",
       "LGD"="#4daf4a",
       "HGD"="#a65628",
-      "Cancer"="#e41a1c"
+      "EAC"="#e41a1c"
     )
   )
 )

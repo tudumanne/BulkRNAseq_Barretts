@@ -16,17 +16,17 @@ mydat = data.frame(as.numeric(as.factor(pd$Status))-1, t(dd[,-1]))
 colnames(mydat) = c("Status", paste0(dd[,1]))
 
 gp = mydat$Status
-vec = mydat$TP53
+vec = mydat$X
 
 roc.res = roc(gp, vec)
 # change direction for MLN ">", if directions is defines, default = auto
 names(roc.res)  # includes AUC
-plot(roc.res, print.auc=TRUE, main="TP53", asp=NA, print.thres="best", print.thres.best.method="youden")
+plot(roc.res, print.auc=TRUE, main="X", asp=NA, print.thres="best", print.thres.best.method="youden")
 ci.auc(roc.res)
 
 auc_ci <- ci.auc(roc.res)
 
-plot(roc.res, print.auc=FALSE, main="TP53", asp=NA, print.thres=TRUE)
+plot(roc.res, print.auc=FALSE, main="X", asp=NA, print.thres=TRUE)
 text(
   0.4, 0.2,
   labels = paste0(

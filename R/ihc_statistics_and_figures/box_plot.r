@@ -7,9 +7,9 @@ metadata = read.csv("all_metadata.csv", header=TRUE)
 h_score_merged = h_score %>% inner_join(metadata, by = "Tissue_ID")
 
 h_score_merged$Type = factor(h_score_merged$Type, levels=c("Normal","Malignant"))
-h_score_merged$TP53 = as.numeric(h_score_merged$TP53)
+h_score_merged$X = as.numeric(h_score_merged$X)
 
-mw <- wilcox.test(TP53 ~ Type, data = h_score_merged)
+mw <- wilcox.test(X ~ Type, data = h_score_merged)
 mw
 p_val <- mw$p.value
 W_val <- mw$statistic
@@ -41,11 +41,11 @@ annot_h_score_merged <- data.frame(
 
 
 #portrait 4x5
-ggplot(h_score_merged, aes(x=Type, y=TP53, fill=Type)) + 
+ggplot(h_score_merged, aes(x=Type, y=X, fill=Type)) + 
   geom_boxplot(outlier.shape = NA) + geom_jitter(width = 0.2) +
   #geom_violin(alpha=0.3, linewidth=0.5, trim=FALSE, aes(fill=Type))+
   scale_fill_manual(values=c("Normal"="#66c2a4", "Malignant"="#fcae91"))+
-  labs(title="TP53",x="Tissue category", y = "H-score")+
+  labs(title="X",x="Tissue category", y = "H-score")+
   #geom_boxplot(width=0.1)+
   theme_bw()+
   ylim(-20,350)+

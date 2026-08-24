@@ -1,4 +1,4 @@
-#This script run the formatting required for decoupleR analyses by adding gene names to DEG lists from DESeq2 analysis
+#This script runs the formatting required for decoupleR analyses by adding gene names to DEG lists from DESeq2 analysis
 
 #load required libraries
 library(dplyr)

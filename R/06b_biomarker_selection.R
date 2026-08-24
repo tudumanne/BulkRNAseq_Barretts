@@ -149,14 +149,12 @@ for (comp in comparisons) {
   #export as .csv files
   write.csv(
     XY_subset_up_shortlist,
-    paste0(comp, "_upregulated_shortlist.csv"),
-    row.names = FALSE
+    paste0(comp, "_upregulated_shortlist.csv")
   )
   
   write.csv(
     XY_subset_down_shortlist,
-    paste0(comp, "_downregulated_shortlist.csv"),
-    row.names = FALSE
+    paste0(comp, "_downregulated_shortlist.csv")
   )
   
   #save .RData file
