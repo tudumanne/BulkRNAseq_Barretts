@@ -47,6 +47,7 @@ graph TD;
     C-->E[Cluster Profiler]:::method;
     C-->F[decoupleR]:::method;
     G[TPM counts]:::input-->H[Biomarker filtering]:::method;
+    D-->H;
     H-->J[Shortlisted biomarkers]:::output1;
     J-->K[ML ranking]:::method;
     J-->L[protein-coding genes]:::output1;
