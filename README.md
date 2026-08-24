@@ -2,6 +2,8 @@
 
 This repository contains the data analysis pipeline used for the following project:
 
+#### Transcriptomic Changes and Biomarkers in Barrett’s Metaplasia, Dysplasia and Cancer
+
 [Add citation]
 
 Data generation: 
