@@ -5,6 +5,7 @@ library(DESeq2)
 library(ggplot2)
 
 #transformation of data for visualization
+ds <- readRDS("deseq2_simplemodel_dds.rds")
 vsd <- vst(dds)
 
 #define classification

@@ -85,10 +85,6 @@ write.table(norm_counts_log_symbols, "adjusted_normalized_counts_log.txt", quote
 mod_mat <- model.matrix(design(dds), colData(dds))
 mod_mat
 
-#define the model matrix
-mod_mat <- model.matrix(design(dds), colData(dds))
-mod_mat
-
 #calculate coefficient vectors for each group
 nsq <- colMeans(mod_mat[dds$Classification == "NSq", ])
 ndbe <- colMeans(mod_mat[dds$Classification == "NDBE", ])
